@@ -1,2 +1,20 @@
-# -
-2020_데이터청년캠퍼스_연세대학교_프로젝트
+# 2020_데이터청년캠퍼스_연세대학교_프로젝트
+![제목 없음](https://user-images.githubusercontent.com/47103479/92443807-f993a480-f1ec-11ea-8960-acdde191309c.png)
+![제목 없음1](https://user-images.githubusercontent.com/47103479/92443823-01534900-f1ed-11ea-811c-9ebf9165443b.png)
+![제목 없음2](https://user-images.githubusercontent.com/47103479/92443845-09ab8400-f1ed-11ea-92d8-c02ff3e8d8b0.png)
+![제목 없음3](https://user-images.githubusercontent.com/47103479/92443881-18923680-f1ed-11ea-81a5-de87f90ec71a.png)
+![제목 없음4](https://user-images.githubusercontent.com/47103479/92443897-1c25bd80-f1ed-11ea-8fee-2fe60bd5e87b.png)
+![제목 없음5](https://user-images.githubusercontent.com/47103479/92443904-1fb94480-f1ed-11ea-9d51-6f30fb13c051.png)
+![제목 없음6](https://user-images.githubusercontent.com/47103479/92443908-21830800-f1ed-11ea-8d54-2dab04bf8b76.png)
+![제목 없음7](https://user-images.githubusercontent.com/47103479/92443912-22b43500-f1ed-11ea-8995-4e4918afbc7b.png)
+![제목 없음8](https://user-images.githubusercontent.com/47103479/92443918-247df880-f1ed-11ea-97bd-6d29dbf04a63.png)
+![제목 없음9](https://user-images.githubusercontent.com/47103479/92443921-25af2580-f1ed-11ea-883f-00756d04b170.png)
+![제목 없음10](https://user-images.githubusercontent.com/47103479/92443931-2942ac80-f1ed-11ea-87fa-680e2d3fd3fd.png)
+![제목 없음11](https://user-images.githubusercontent.com/47103479/92443938-2a73d980-f1ed-11ea-9427-b5ba3b2b8f0f.png)
+![제목 없음12](https://user-images.githubusercontent.com/47103479/92443942-2c3d9d00-f1ed-11ea-9ca4-8c57d7d67940.png)
+![제목 없음13](https://user-images.githubusercontent.com/47103479/92443947-2d6eca00-f1ed-11ea-8f62-71f358cfec47.png)
+![제목 없음14](https://user-images.githubusercontent.com/47103479/92443949-2e9ff700-f1ed-11ea-84c3-349187508141.png)
+![제목 없음15](https://user-images.githubusercontent.com/47103479/92443959-319ae780-f1ed-11ea-88df-520a68c48e90.png)
+![제목 없음16](https://user-images.githubusercontent.com/47103479/92443965-3364ab00-f1ed-11ea-880d-475630226af3.png)
+![제목 없음17](https://user-images.githubusercontent.com/47103479/92444289-9bb38c80-f1ed-11ea-9157-4e95db22bb5a.png)
+
