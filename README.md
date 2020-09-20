@@ -66,53 +66,44 @@ tqdm : '4.49.0'
 # how to use
 ## 1) machine learning model
 ### 1. eda 연도별 피처 비교
-'''
-def year_plot(e):
-    plt.subplots(figsize=(20, 10))
-    bar_width = 0.35
-    a = dt_15.groupby(["sido"])[e].mean().sort_values(ascending=False)
-    a.plot.bar(rot=0, figsize=(20, 10), label='2015', color='yellowgreen')
-    b = dt_16.groupby(["sido"])[e].mean().sort_values(ascending=False)
-    b.plot.bar(rot=0, figsize=(20, 10), label='2016', color='y')
-    c = dt_17.groupby(["sido"])[e].mean().sort_values(ascending=False)
-    c.plot.bar(rot=0, figsize=(20, 10), label='2017', color='azure')
-    d = test.groupby(["sido"])[e].mean().sort_values(ascending=False)
-    d.plot.bar(rot=0, figsize=(20, 10), label='2018', color='forestgreen')
-    plt.legend()
-    plt.title('연도별 '+str(e))
-    return plt.show()
-'''
+    def year_plot(e):
+      plt.subplots(figsize=(20, 10))
+      bar_width = 0.35
+      a = dt_15.groupby(["sido"])[e].mean().sort_values(ascending=False)
+      a.plot.bar(rot=0, figsize=(20, 10), label='2015', color='yellowgreen')
+      b = dt_16.groupby(["sido"])[e].mean().sort_values(ascending=False)
+      b.plot.bar(rot=0, figsize=(20, 10), label='2016', color='y')
+      c = dt_17.groupby(["sido"])[e].mean().sort_values(ascending=False)
+      c.plot.bar(rot=0, figsize=(20, 10), label='2017', color='azure')
+      d = test.groupby(["sido"])[e].mean().sort_values(ascending=False)
+      d.plot.bar(rot=0, figsize=(20, 10), label='2018', color='forestgreen')
+      plt.legend()
+      plt.title('연도별 '+str(e))
+      return plt.show()
 
 ### 2. 모델의 f1_score 비교 함수 
-'''
-def four_f1(model_f1,model):
-    print("F1 Cross_validate",model_f1)
-    print("F1 Macro:",f1_score(test_target, model, average='macro'))
-    print("F1 Micro:",f1_score(test_target, model, average='micro'))  
-    print("F1 Weighted:",f1_score(test_target, model, average='weighted'))
-    print("\nMatrix of confusion")
-    return confusion_matrix(test_target, model)
-'''
-
+    def four_f1(model_f1,model):
+      print("F1 Cross_validate",model_f1)
+      print("F1 Macro:",f1_score(test_target, model, average='macro'))
+      print("F1 Micro:",f1_score(test_target, model, average='micro'))  
+      print("F1 Weighted:",f1_score(test_target, model, average='weighted'))
+      print("\nMatrix of confusion")
+      return confusion_matrix(test_target, model)
 
 ### 3. 모델의 confusion_matrix 시각화 함수
-'''
-def cnf_matrix_model(model):
-    cnf_matrix_gbc = confusion_matrix(test_target, model)
-    g = sns.heatmap(pd.DataFrame(cnf_matrix_gbc), annot=True, cmap="BuGn", fmt='g')
-    buttom , top = g.get_ylim()
-    g.set_ylim(buttom+0.5, top-0.5)
-    plt.ylabel('Actual Label')
-    plt.xlabel('Predicted Label')
-    return g
-'''
+    def cnf_matrix_model(model):
+      cnf_matrix_gbc = confusion_matrix(test_target, model)
+      g = sns.heatmap(pd.DataFrame(cnf_matrix_gbc), annot=True, cmap="BuGn", fmt='g')
+      buttom , top = g.get_ylim()
+      g.set_ylim(buttom+0.5, top-0.5)
+      plt.ylabel('Actual Label')
+      plt.xlabel('Predicted Label')
+      return g
 
-### 4. 변수 중요도 
-'''
-def plot_feature_importance(model, X_train, figsize=(12, 6)):
+
+### 4. 변수 중요도     
+    def plot_feature_importance(model, X_train, figsize=(12, 6)):
     sns.set_style('darkgrid')
-    
-    # Plot feature importance
     feature_importance = model.feature_importances_
     feature_importance = 100.0 * (feature_importance / feature_importance.max())
     sorted_idx = np.argsort(feature_importance)
@@ -127,22 +118,19 @@ def plot_feature_importance(model, X_train, figsize=(12, 6)):
     plt.xlabel('Relative Importance')
     plt.title('Variable Importance')
     plt.show()
-'''
+
 
 ### 5. 앙상블 코드 
-'''
-def combine_voters(data, weights=[0.5, 0.5]):
-    # do soft voting with both classifiers
-    vc.voting="soft"
-    vc1_probs = vc.predict_proba(data)
-    vc2.voting="soft"
-    vc2_probs = vc2.predict_proba(data) 
+    def combine_voters(data, weights=[0.5, 0.5]):
+      vc.voting="soft"
+      vc1_probs = vc.predict_proba(data)
+      vc2.voting="soft"
+      vc2_probs = vc2.predict_proba(data) 
     
-    final_vote = (vc1_probs * weights[0]) + (vc2_probs * weights[1])
-    predictions = np.argmax(final_vote, axis=1)
+      final_vote = (vc1_probs * weights[0]) + (vc2_probs * weights[1])
+      predictions = np.argmax(final_vote, axis=1)
     
-    return predictions
-'''
+      return predictions
 
 ## 2) news-articles analysis
 
@@ -159,13 +147,12 @@ wget.download(url)
 
 ### help Function
 #### 1. make bert_encode : word piece tokenizer. BERT의 incoder 부분을 구현
-'''
-def bert_encode(texts, tokenizer, max_len=128):
-    all_tokens = []
-    all_masks = []
-    all_segments = []
+    def bert_encode(texts, tokenizer, max_len=128):
+      all_tokens = []
+      all_masks = []
+      all_segments = []
     
-    for text in texts:
+      for text in texts:
         text = tokenizer.tokenize(text)
             
         text = text[:max_len-2]
@@ -181,26 +168,22 @@ def bert_encode(texts, tokenizer, max_len=128):
         all_masks.append(pad_masks)
         all_segments.append(segment_ids)
     
-    return np.array(all_tokens), np.array(all_masks), np.array(all_segments)
-'''
+      return np.array(all_tokens), np.array(all_masks), np.array(all_segments)
 
 #### 2. make build_model : BERT모델의 fine tuning architecture 구현
-'''
-def build_model(bert_layer, max_len=128):
-    input_word_ids = Input(shape=(max_len,), dtype=tf.int32, name="input_word_ids")
-    input_mask = Input(shape=(max_len,), dtype=tf.int32, name="input_mask")
-    segment_ids = Input(shape=(max_len,), dtype=tf.int32, name="segment_ids")
+    def build_model(bert_layer, max_len=128):
+      input_word_ids = Input(shape=(max_len,), dtype=tf.int32, name="input_word_ids")
+      input_mask = Input(shape=(max_len,), dtype=tf.int32, name="input_mask")
+      segment_ids = Input(shape=(max_len,), dtype=tf.int32, name="segment_ids")
 
-    _, sequence_output = bert_layer([input_word_ids, input_mask, segment_ids])
-    clf_output = sequence_output[:, 0, :]
-    out = Dense(1, activation='sigmoid')(clf_output)
+      _, sequence_output = bert_layer([input_word_ids, input_mask, segment_ids])
+      clf_output = sequence_output[:, 0, :]
+      out = Dense(1, activation='sigmoid')(clf_output)
     
-    model = Model(inputs=[input_word_ids, input_mask, segment_ids], outputs=out)
-    model.compile(Adam(lr=1e-5), loss='binary_crossentropy', metrics=['accuracy'])
-    
-    return model
-'''
-
+      model = Model(inputs=[input_word_ids, input_mask, segment_ids], outputs=out)
+      model.compile(Adam(lr=1e-5), loss='binary_crossentropy', metrics=['accuracy'])
+      
+      return model
 
 ![제목 없음](https://user-images.githubusercontent.com/47103479/92443807-f993a480-f1ec-11ea-8960-acdde191309c.png)
 ![제목 없음1](https://user-images.githubusercontent.com/47103479/92443823-01534900-f1ed-11ea-811c-9ebf9165443b.png)
