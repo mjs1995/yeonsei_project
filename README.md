@@ -5,6 +5,34 @@
 # objective
 - 지방소멸 위기를 인식하고 현 상태를 진단 및 지방소멸 위험지역을 분류하고 동시에 지방소멸에 미치는 영향 요인들을 구체화.
 
+# 역할
+- DB 설계
+
+        * MariaDB와 HeidiSQL을 이용해서 데이터 베이스 구축
+        * MySQL WorkBench를 이용하여 ERD도식화
+
+- 데이터 eda & FE
+
+        * shap파일 전처리를 통해 geojson파일을 가지고 mapbox, folium, plotly를 통한 지도시각화
+        * Cartogram을 이용한 라벨링된 지도 시각화
+        * 피처 시각화
+        * VIF 측정
+
+- 데이터 모델링 
+        
+        * 교차 검증(Cross validation) - StratifiedKFold
+        * GradientBoosting 
+            -  RandomizedSearchCV이용한 파라미터 튜닝 및 f1_score, confusion_matrix 시각화
+            -  random_state를 변경해가며 voting
+        *  RandomForest
+            -  RandomizedSearchCV이용한 파라미터 튜닝 및 f1_score, confusion_matrix 시각화
+            -  random_state를 변경해가며 voting
+        *  Xgboost
+            -  feature importance, Permutation Importance , graphviz 시각화
+            -  RandomizedSearchCV이용한 파라미터 튜닝 및 f1_score, confusion_matrix 시각화
+            -  random_state를 변경해가며 voting 
+        * Xgboost와 GradientBoosting 앙상블 
+
 ## 1) Data from Kosis
 - 2015~2018 전국 228개 지방자치단체 데이터
 Cofog(정부기능분류)기반으로
