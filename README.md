@@ -230,5 +230,4 @@ wget.download(url)
 ![제목 없음14](https://user-images.githubusercontent.com/47103479/92443949-2e9ff700-f1ed-11ea-84c3-349187508141.png)
 ![제목 없음15](https://user-images.githubusercontent.com/47103479/92443959-319ae780-f1ed-11ea-88df-520a68c48e90.png)
 ![제목 없음16](https://user-images.githubusercontent.com/47103479/92443965-3364ab00-f1ed-11ea-880d-475630226af3.png)
-![제목 없음17](https://user-images.githubusercontent.com/47103479/92444289-9bb38c80-f1ed-11ea-9157-4e95db22bb5a.png)
 
