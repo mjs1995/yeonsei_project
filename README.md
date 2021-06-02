@@ -213,7 +213,7 @@ wget.download(url)
       
       return model
 
-![제목 없음](https://user-images.githubusercontent.com/47103479/92443807-f993a480-f1ec-11ea-8960-acdde191309c.png)
+![image](https://user-images.githubusercontent.com/47103479/120472963-7b61d880-c3e1-11eb-85cf-7e62282d5bbe.png)
 ![제목 없음1](https://user-images.githubusercontent.com/47103479/92443823-01534900-f1ed-11ea-811c-9ebf9165443b.png)
 ![제목 없음2](https://user-images.githubusercontent.com/47103479/92443845-09ab8400-f1ed-11ea-92d8-c02ff3e8d8b0.png)
 ![제목 없음3](https://user-images.githubusercontent.com/47103479/92443881-18923680-f1ed-11ea-81a5-de87f90ec71a.png)
@@ -230,4 +230,5 @@ wget.download(url)
 ![제목 없음14](https://user-images.githubusercontent.com/47103479/92443949-2e9ff700-f1ed-11ea-84c3-349187508141.png)
 ![제목 없음15](https://user-images.githubusercontent.com/47103479/92443959-319ae780-f1ed-11ea-88df-520a68c48e90.png)
 ![제목 없음16](https://user-images.githubusercontent.com/47103479/92443965-3364ab00-f1ed-11ea-880d-475630226af3.png)
-
+![image](https://user-images.githubusercontent.com/47103479/120472656-1dcd8c00-c3e1-11eb-814c-c736b5622175.png)
+![image](https://user-images.githubusercontent.com/47103479/120472678-2625c700-c3e1-11eb-80ea-25eb310a5803.png)
